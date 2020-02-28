@@ -7,7 +7,7 @@
 class_name: FunctionalTester
 modules:
     enabled:
-        - ZendExpressive
+        - Mezzio
         - \Helper\Functional
         - REST:
-            depends: ZendExpressive
+            depends: Mezzio
