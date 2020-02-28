@@ -34,6 +34,7 @@ class ConfigProvider
         return [
             'invokables' => [
                 Handler\PingHandler::class => Handler\PingHandler::class,
+                Handler\RestHandler::class => Handler\RestHandler::class,
             ],
             'factories'  => [
                 Handler\HomePageHandler::class => Handler\HomePageHandlerFactory::class,
