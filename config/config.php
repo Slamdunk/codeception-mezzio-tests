@@ -30,6 +30,9 @@ $aggregator = new ConfigAggregator([
         ? \Mezzio\Swoole\ConfigProvider::class
         : function(){ return[]; },
 
+    \Mezzio\Session\ConfigProvider::class,
+    \Mezzio\Session\Ext\ConfigProvider::class,
+
     // Default App module config
     App\ConfigProvider::class,
 

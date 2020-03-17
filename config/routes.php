@@ -36,4 +36,9 @@ return function (Application $app, MiddlewareFactory $factory, ContainerInterfac
     $app->get('/', App\Handler\HomePageHandler::class, 'home');
     $app->get('/api/ping', App\Handler\PingHandler::class, 'api.ping');
     $app->route('/rest', App\Handler\RestHandler::class, ['GET', 'POST', 'PUT', 'DELETE'], 'rest');
+
+    $app->get('/session/:action', [
+        Mezzio\Session\SessionMiddleware::class,
+        App\Handler\SessionHandler::class,
+    ], 'session.test');
 };
