@@ -1,3 +1,5 @@
+/.idea
+/composer.lock
 /clover.xml
 /coveralls-upload.json
 /phpunit.xml
